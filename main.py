@@ -1,14 +1,16 @@
 import os
 import sys
 from pathlib import Path
+import colorama
 
+colorama.just_fix_windows_console()
 
 def pause():
     input("\nНажмите Enter для продолжения...")
 
 
 def clear_screen():
-    os.system("cls" if os.name == "nt" else "clear")
+    print("\033[2J\033[H", end="", flush=True)
 
 
 def main():
