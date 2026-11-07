@@ -1,22 +1,32 @@
-# Regulus Optimizer
+# Regulus 
 
-Regulus Optimizer — консольный твикер для Windows, предназначенный для удобного запуска системных настроек и оптимизаций через файлы .bat и .reg.
+Regulus — консольный твикер и менеджер скриптов для Windows, предназначенный для удобного поиска и запуска системных настроек и оптимизаций через файлы `.bat` и `.reg`.
+
+> **Обратите внимание:** В программе **нет встроенных твиков**. Regulus работает как загрузчик/оболочка: вы сами добавляете нужные вам скрипты и твики реестра в директорию программы.
 
 ## Возможности
 
-- Автоматический поиск файлов .bat и .reg в текущей директории и всех вложенных папках.
-- Поддержка пакетных файлов Windows и файлов реестра.
-- Выбор нужного твика по номеру в консоли.
-- Запуск выбранного файла непосредственно из программы.
-- Не требует сторонних Python-библиотек.
+- **Без лишнего балласта:** программа не навязывает сторонние твики — вы используете только проверенные лично вами скрипты.
+- Автоматический поиск файлов `.bat` и `.reg` в текущей директории и всех вложенных папках.
+- Поддержка пакетных файлов Windows (`.bat`) и файлов реестра (`.reg`).
+- Удобный выбор нужного твика по номеру в консоли.
+- Запуск выбранного файла непосредственно из меню программы.
+- Полностью автономный инструмент: не требует сторонних Python-библиотек.
+
+## Как добавить твики
+
+1. Поместите ваши файлы `.bat` и `.reg` в папку с программой (можно организовывать их по вложенным папкам, например `tweaks/network`, `tweaks/ui` и т. д.).
+2. Запустите утилиту — она автоматически просканирует директорию и выведет все найденные скрипты единым списком.
 
 ## Использование
 
 Запустите программу командой:
 
-    python main.py
+```bash
+python main.py
+```
 
-Regulus Optimizer просканирует текущую директорию и вложенные папки, после чего покажет список найденных твиков. Введите номер нужного файла, чтобы запустить его.
+Regulus просканирует папки и отобразит пронумерованный список доступных файлов. Введите номер нужного твика и нажмите **Enter**, чтобы запустить его.
 
 ## Требования
 
@@ -25,29 +35,39 @@ Regulus Optimizer просканирует текущую директорию �
 
 ## Важная информация
 
-Некоторые твики могут изменять системный реестр и настройки Windows. Перед запуском проверяйте содержимое BAT- и REG-файлов. Используйте программу на свой страх и риск.
+Regulus выполняет запуск переданных вами файлов. Некоторые твики могут изменять системный реестр и критические параметры Windows. Всегда проверяйте содержимое файлов перед запуском. Используйте программу на свой страх и риск.
 
 ---
 
-# Regulus Optimizer (English)
+# Regulus (English)
 
-Regulus Optimizer is a command-line Windows tweaking tool for launching system tweaks and optimizations through .bat and .reg files.
+Regulus is a command-line Windows tweaking manager designed to organize and execute system optimizations via `.bat` and `.reg` files.
+
+> **Note:** Regulus **does not include built-in tweaks**. It acts as a runner/manager: you add your own trusted batch scripts and registry files to the folder.
 
 ## Features
 
-- Automatically searches for .bat and .reg files in the current directory and all subdirectories.
-- Supports Windows batch scripts and registry files.
-- Lets you select a tweak by its number in the console.
-- Launches the selected file directly from the application.
-- Requires no third-party Python libraries.
+- **Clean & transparent:** no pre-packaged tweaks or hidden scripts — run only what you inspect and provide yourself.
+- Automatically scans the current directory and all subfolders for `.bat` and `.reg` files.
+- Supports both Windows batch scripts and registry import files.
+- Simple numbered list selection directly in the console.
+- Launches selected tweaks on demand without leaving the tool.
+- Zero dependencies: runs purely on Python standard library.
+
+## Adding Tweaks
+
+1. Copy your `.bat` and `.reg` files into the program directory (you can organize them into subfolders such as `tweaks/system`, `tweaks/privacy`, etc.).
+2. Run the application — it will discover and index all valid files automatically.
 
 ## Usage
 
-Run the application with:
+Run the program:
 
-    python main.py
+```bash
+python main.py
+```
 
-Regulus Optimizer scans the current directory and its subdirectories, then displays the available tweaks. Enter the number of a file to launch it.
+Regulus will list all detected tweaks with assigned numbers. Type the number of the script you want to run and press **Enter**.
 
 ## Requirements
 
@@ -56,4 +76,4 @@ Regulus Optimizer scans the current directory and its subdirectories, then displ
 
 ## Disclaimer
 
-Some tweaks may modify the Windows registry and system settings. Review BAT and REG files before running them. Use this software at your own risk.
+Regulus runs the scripts provided by the user. Modifying system settings or registry keys carries inherent risks. Always inspect scripts before executing them. Use at your own risk.
