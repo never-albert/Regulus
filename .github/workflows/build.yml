@@ -1,0 +1,45 @@
+name: Build Regulus Tweaker
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Nuitka
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install nuitka
+
+      - name: Build executable
+        run: |
+          python -m nuitka `
+            --mode=onefile `
+            --assume-yes-for-downloads `
+            --output-filename=Regulus.exe `
+            main.py
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: Regulus-Optimizer-Windows
+          path: Regulus.exe
+          if-no-files-found: error
+          retention-days: 30
