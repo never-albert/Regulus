@@ -1,150 +1,59 @@
-\# Regulus Optimizer
+# Regulus Optimizer
 
+Regulus Optimizer — консольный твикер для Windows, предназначенный для удобного запуска системных настроек и оптимизаций через файлы .bat и .reg.
 
+## Возможности
 
-\*\*Regulus Optimizer\*\* — консольный твикер для Windows, предназначенный для удобного запуска системных настроек и оптимизаций через `.bat` и `.reg` файлы.
+- Автоматический поиск файлов .bat и .reg в текущей директории и всех вложенных папках.
+- Поддержка пакетных файлов Windows и файлов реестра.
+- Выбор нужного твика по номеру в консоли.
+- Запуск выбранного файла непосредственно из программы.
+- Не требует сторонних Python-библиотек.
 
+## Использование
 
+Запустите программу командой:
 
-\### Возможности
+    python main.py
 
+Regulus Optimizer просканирует текущую директорию и вложенные папки, после чего покажет список найденных твиков. Введите номер нужного файла, чтобы запустить его.
 
+## Требования
 
-\- \*\*Автоматический поиск\*\* — сканирование текущей директории и всех вложенных папок.
+- Windows 10 или Windows 11
+- Python 3.8 или новее
 
-\- \*\*Поддержка BAT и REG\*\* — обнаружение пакетных файлов и файлов реестра Windows.
+## Важная информация
 
-\- \*\*Простой интерфейс\*\* — выбор нужного твика по номеру в консоли.
+Некоторые твики могут изменять системный реестр и настройки Windows. Перед запуском проверяйте содержимое BAT- и REG-файлов. Используйте программу на свой страх и риск.
 
-\- \*\*Быстрый запуск\*\* — применение выбранного твика непосредственно из программы.
+---
 
-\- \*\*Без дополнительных зависимостей\*\* — работа на стандартной библиотеке Python.
+# Regulus Optimizer (English)
 
+Regulus Optimizer is a command-line Windows tweaking tool for launching system tweaks and optimizations through .bat and .reg files.
 
+## Features
 
-\### Использование
+- Automatically searches for .bat and .reg files in the current directory and all subdirectories.
+- Supports Windows batch scripts and registry files.
+- Lets you select a tweak by its number in the console.
+- Launches the selected file directly from the application.
+- Requires no third-party Python libraries.
 
+## Usage
 
+Run the application with:
 
-Для запуска программы выполните:
+    python main.py
 
+Regulus Optimizer scans the current directory and its subdirectories, then displays the available tweaks. Enter the number of a file to launch it.
 
+## Requirements
 
-```bash
+- Windows 10 or Windows 11
+- Python 3.8 or newer
 
-python main.py
+## Disclaimer
 
-```
-
-
-
-Regulus Optimizer автоматически просканирует текущую директорию и все вложенные папки, после чего выведет список найденных твиков.
-
-
-
-Введите номер нужного файла, чтобы запустить его.
-
-
-
-\### Требования
-
-
-
-\- Windows 10 / Windows 11
-
-\- Python 3.8 или новее
-
-
-
-\### Важная информация
-
-
-
-Некоторые твики могут изменять системный реестр, параметры Windows и настройки операционной системы.
-
-
-
-Перед запуском рекомендуется ознакомиться с содержимым BAT- и REG-файлов.
-
-
-
-Используйте программу на свой страх и риск.
-
-
-
-\---
-
-
-
-\# Regulus Optimizer (English)
-
-
-
-\*\*Regulus Optimizer\*\* is a command-line Windows tweaking tool designed to simplify launching system tweaks and optimizations through `.bat` and `.reg` files.
-
-
-
-\### Features
-
-
-
-\- \*\*Automatic scanning\*\* — searches the current directory and all nested folders.
-
-\- \*\*BAT and REG support\*\* — detects Windows batch scripts and registry files.
-
-\- \*\*Simple interface\*\* — select tweaks using their assigned numbers.
-
-\- \*\*Quick execution\*\* — launch selected tweaks directly from the application.
-
-\- \*\*No external dependencies\*\* — built using the Python standard library.
-
-
-
-\### Usage
-
-
-
-Run the application:
-
-
-
-```bash
-
-python main.py
-
-```
-
-
-
-Regulus Optimizer will automatically scan the current directory and all nested folders, then display a list of available tweaks.
-
-
-
-Enter the number of the file you want to launch.
-
-
-
-\### Requirements
-
-
-
-\- Windows 10 / Windows 11
-
-\- Python 3.8 or newer
-
-
-
-\### Disclaimer
-
-
-
-Some tweaks may modify the Windows registry, system settings, and operating system configuration.
-
-
-
-Review BAT and REG files before executing them.
-
-
-
-Use this software at your own risk.
-
+Some tweaks may modify the Windows registry and system settings. Review BAT and REG files before running them. Use this software at your own risk.
